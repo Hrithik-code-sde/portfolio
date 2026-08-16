@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hrithik — Full Stack Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Hrithik — Full Stack Engineer working across mobile, backend and DevOps."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===================== NOISE / GRAIN OVERLAY ===================== -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ===================== SIDE PROGRESS RAIL (desktop) ===================== -->
+    <nav class="rail" aria-label="Section navigation">
+      <div class="rail-track">
+        <span class="rail-fill" id="railFill"></span>
+      </div>
+      <ul class="rail-dots">
+        <li>
+          <a
+            href="#hero"
+            data-label="Intro"
+            class="rail-dot active"
+            data-section="hero"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            data-label="About"
+            class="rail-dot"
+            data-section="about"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            data-label="Experience"
+            class="rail-dot"
+            data-section="experience"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            data-label="Projects"
+            class="rail-dot"
+            data-section="projects"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#education"
+            data-label="Education"
+            class="rail-dot"
+            data-section="education"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#skills"
+            data-label="Skills"
+            class="rail-dot"
+            data-section="skills"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            data-label="Contact"
+            class="rail-dot"
+            data-section="contact"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ===================== TOP BAR (mobile) ===================== -->
+    <header class="topbar">
+      <a href="#hero" class="brand">HR<span>.</span></a>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#hero" class="mobile-link">01 — Intro</a>
+      <a href="#about" class="mobile-link">02 — About</a>
+      <a href="#experience" class="mobile-link">03 — Experience</a>
+      <a href="#projects" class="mobile-link">04 — Projects</a>
+      <a href="#education" class="mobile-link">05 — Education</a>
+      <a href="#skills" class="mobile-link">06 — Skills</a>
+      <a href="#contact" class="mobile-link">07 — Contact</a>
+    </div>
+
+    <main>
+      <!-- ===================== HERO ===================== -->
+      <section id="hero" class="section hero">
+        <canvas id="net" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+          <div class="hero-flex">
+            <div class="hero-text">
+              <p class="eyebrow reveal">Full Stack Engineer</p>
+              <h1 class="hero-title">
+                <span class="reveal" style="--d: 0">Hi, I'm</span>
+                <span class="reveal hero-name" style="--d: 1">Hrithik.</span>
+              </h1>
+              <p class="hero-sub reveal" style="--d: 2">
+                Full Stack Engineer with 3+ years of experience building
+                production-grade
+                <span class="hl"
+                  >web and mobile applications in the HealthTech and SaaS
+                  space.</span
+                >
+                Skilled in React, React Native, Node.js, Java SpringBoot,
+                MongoDB, and PostgreSQL, with experience spanning frontend
+                architecture, REST APIs, backend services, and database design.
+                Passionate about building scalable products, solving complex
+                engineering problems, and delivering meaningful user
+                experiences.
+              </p>
+              <div class="hero-actions reveal" style="--d: 3">
+                <a href="#contact" class="btn btn-primary">Let's talk</a>
+                <a href="#experience" class="btn btn-ghost">See my work</a>
+              </div>
+            </div>
+
+            <!-- EDIT ME: replace src with your own photo, e.g. "photo.jpg" placed next to index.html -->
+            <div class="hero-avatar reveal" style="--d: 0">
+              <div class="avatar-ring">
+                <img
+                  src="photo.jpeg"
+                  alt="Portrait of Hrithik"
+                  onerror="
+                    this.closest('.hero-avatar').classList.add('no-photo')
+                  "
+                />
+                <div class="avatar-fallback">HR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          href="#about"
+          class="scroll-cue"
+          aria-label="Scroll to about section"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ===================== ABOUT ===================== -->
+      <section id="about" class="section about">
+        <div class="section-inner">
+          <p class="eyebrow reveal">About</p>
+          <h2 class="section-title reveal">A bit about how I work</h2>
+          <div class="about-grid">
+            <p class="about-text reveal">
+              I'm a Full Stack Engineer with
+              <strong>3+ years of experience</strong>, building and shipping
+              production web and mobile applications, with experience across
+              React, React Native, Node.js, TypeScript, MongoDB, and PostgreSQL.
+              I enjoy working across the stack — from designing user experiences
+              and building APIs to working with databases, integrations,
+              performance.
+            </p>
+            <p class="about-text reveal">
+              I currently work on a
+              <strong>patient-facing mobile app</strong> and a
+              <strong>health assistant app</strong> — products where a broken
+              state or a slow screen isn't just a bug report, it's someone's
+              care getting in the way. That's shaped how carefully I debug, and
+              how much I care about things actually working, not just looking
+              done.
+            </p>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-value"
+                ><span class="stat-num" data-count="3">0</span
+                ><span class="stat-suffix">+</span></span
+              >
+              <span class="stat-label">years experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"
+                ><span class="stat-num" data-count="2">0</span></span
+              >
+              <span class="stat-label">apps in store/production</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"
+                ><span class="stat-num" data-count="100" id="statFull">0</span
+                ><span class="stat-suffix">%</span></span
+              >
+              <span class="stat-label">full-stack curious</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EXPERIENCE ===================== -->
+      <section id="experience" class="section experience">
+        <div class="section-inner">
+          <p class="eyebrow reveal">Experience</p>
+          <h2 class="section-title reveal">Where I've worked</h2>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="role-period">July 2025 — Present</span>
+                <h3 class="role-title">Frontend Engineer - I</h3>
+                <span class="role-company">TatvaCare · Full-time</span>
+                <p class="role-desc">
+                  Working across a GoodFlip &amp; GoodFlip Care patient-facing
+                  health assistant app and Coach Portal for helping internal
+                  Health Coaches ease their interaction with patients for
+                  appointments, tests and plans — SDK integrations, frontend
+                  architecture, state management, backend endpoints and
+                  databases.
+                </p>
+                <ul class="role-tags">
+                  <li>React JS</li>
+                  <li>React Native</li>
+                  <li>Angular</li>
+                  <li>Node.js</li>
+                  <li>Java SpringBoot</li>
+                  <li>MongoDB</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="role-period">July 2023 — July 2025</span>
+                <h3 class="role-title">Full Stack Engineer</h3>
+                <span class="role-company">WNS · Full-time</span>
+                <p class="role-desc">
+                  Played a key role in architecting and transitioning to a
+                  micro-frontend architecture for a large-scale application,
+                  improving code maintainability by 40% and enabling faster,
+                  independent module deployment.
+                </p>
+                <ul class="role-tags">
+                  <li>Angular</li>
+                  <li>TypeScript</li>
+                  <li>Node.js</li>
+                  <li>MongoDB</li>
+                  <li>Azure DevOps</li>
+                  <li>Docker &amp; Kubernetes</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="role-period">Jan 2023 — July 2023</span>
+                <h3 class="role-title">Graduate Engineering Intern</h3>
+                <span class="role-company">Smiths Detection · Internship</span>
+                <p class="role-desc">
+                  Developed and maintained a scalable web application platform
+                  supporting 100+ active users with reliable, consistent backend
+                  performance. Designed and executed automated testing
+                  strategies for critical backend system modules, increasing
+                  test coverage to 95% and significantly reducing regression
+                  issues.
+                </p>
+                <ul class="role-tags">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>MySQL</li>
+                  <li>Angular</li>
+                  <li>Git</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROJECTS ===================== -->
+      <section id="projects" class="section projects">
+        <div class="section-inner">
+          <p class="eyebrow reveal">Projects</p>
+          <h2 class="section-title reveal">
+            Backend projects I'm building on my own
+          </h2>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-head">
+                <h3 class="project-title">AI Agent Orchestration Platform</h3>
+                <span class="project-status status-progress"
+                  >In Progress · Personal</span
+                >
+              </div>
+              <ul class="project-points">
+                <li>
+                  Building a multi-agent orchestration platform
+                  (Node.js/TypeScript) to automate personal workflows like
+                  job-hunt tracking and finance analysis, with an extensible
+                  architecture for future agents.
+                </li>
+                <li>
+                  Designing safety and personalization features — an
+                  approval/audit layer for agent actions, scheduled runs, and
+                  shared context across agents.
+                </li>
+                <li>
+                  Building a PostgreSQL-backed data layer and a real-time chat
+                  interface, integrated with Gmail for automated status
+                  tracking.
+                </li>
+              </ul>
+              <ul class="role-tags project-tech">
+                <li>Node.js</li>
+                <li>TypeScript</li>
+                <li>PostgreSQL</li>
+                <li>WebSockets</li>
+                <li>React Native</li>
+              </ul>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <h3 class="project-title">
+                  Distributed Job Scheduler &amp; Task Queue
+                </h3>
+                <span class="project-status status-planned"
+                  >Planned · Backend</span
+                >
+              </div>
+              <ul class="project-points">
+                <li>
+                  Planned as a backend-only system in Java (Spring Boot) to
+                  build hands-on depth in distributed system design — covering
+                  scheduling, caching, messaging, and reliability.
+                </li>
+                <li>
+                  Will include distributed locking, retry/dead-letter handling,
+                  and a message-queue-driven notification service.
+                </li>
+                <li>
+                  Fully self-hosted (PostgreSQL, Redis, Kafka/RabbitMQ, Docker)
+                  with zero infrastructure cost.
+                </li>
+              </ul>
+              <ul class="role-tags project-tech">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>Kafka/RabbitMQ</li>
+                <li>Docker</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EDUCATION ===================== -->
+      <section id="education" class="section education">
+        <div class="section-inner">
+          <p class="eyebrow reveal">Education</p>
+          <h2 class="section-title reveal">Where it started</h2>
+
+          <div class="edu-card reveal">
+            <div class="edu-main">
+              <h3 class="edu-degree">
+                B-Tech, Computer Science and Engineering
+              </h3>
+              <span class="edu-school">PES University, Bangalore</span>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-period">Aug 2019 — May 2023</span>
+              <span class="edu-grade">8.63 / 10.0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SKILLS ===================== -->
+      <section id="skills" class="section skills">
+        <div class="section-inner">
+          <p class="eyebrow reveal">Skills</p>
+          <h2 class="section-title reveal">What I build with</h2>
+
+          <div class="skills-grid">
+            <div class="skill-group reveal">
+              <h3 class="skill-cat">Mobile</h3>
+              <div class="chip-row">
+                <span class="chip">React Native</span>
+                <span class="chip">iOS</span>
+                <span class="chip">Android</span>
+                <span class="chip">Metro</span>
+              </div>
+            </div>
+            <div class="skill-group reveal">
+              <h3 class="skill-cat">Frontend</h3>
+              <div class="chip-row">
+                <span class="chip">React JS</span>
+                <span class="chip">Angular JS</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="skill-group reveal">
+              <h3 class="skill-cat">Backend</h3>
+              <div class="chip-row">
+                <span class="chip">Node.js</span>
+                <span class="chip">Java SpringBoot</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="skill-group reveal">
+              <h3 class="skill-cat">DevOps &amp; Tools</h3>
+              <div class="chip-row">
+                <span class="chip">Git</span>
+                <span class="chip">CI/CD</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section id="contact" class="section contact">
+        <div class="section-inner">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="section-title reveal">Let's build something</h2>
+          <p class="contact-sub reveal">
+            Open to full-time roles and interesting problems. The fastest way to
+            reach me is phone/email — I read everything.
+          </p>
+
+          <div class="contact-card reveal">
+            <a href="mailto:hrithikhm17@gmail.com" class="contact-email"
+              >hrithikhm17@gmail.com</a
+            >
+            <!-- EDIT ME: replace with your number -->
+            <a href="tel:+91XXXXXXXXXX" class="contact-phone"
+              >+91 XXXXX XXXXX</a
+            >
+            <div class="contact-links">
+              <a
+                href="https://github.com/Hrithik-code-sde"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/hrithik-hm-208764207"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1-7lgwJMY1pGR3Y4DN-Uxw7JAkv8N9brq/view"
+                target="_blank"
+                rel="noopener"
+                >Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Designed &amp; built by Hrithik · <span id="year"></span></p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
